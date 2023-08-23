@@ -7,7 +7,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 st.set_page_config(page_title="Rekomendasi Musik", layout="wide")
 
-musics = pd.read_csv('new_df.csv')
+musics = pd.read_csv('https://raw.githubusercontent.com/Lucifashz/Sistem-Rekomendasi-Musik-Python/main/new_df.csv')
 
 cv = CountVectorizer(max_features=5000, stop_words='english')
 vectors = cv.fit_transform(musics['tags']).toarray()
